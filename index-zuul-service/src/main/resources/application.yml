@@ -1,0 +1,29 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: index-zuul-service
+zuul:
+  routes:
+    api-a:
+      path: /api-backtest/**
+      serviceId: trend-trading-backtest-service
+    api-b:
+      path: /api-codes/**
+      serviceId: index-codes-service
+    api-c:
+      path: /api-view/**
+      serviceId: trend-trading-backtest-view
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeout-in-milliseconds: 6000
+
+
+
+
