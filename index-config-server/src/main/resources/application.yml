@@ -3,24 +3,16 @@ spring:
     name: index-config-server
   cloud:
     config:
-      label: master
       server:
-        git:
-          uri: https://github.com/vcaml/SpringConfigfile.git
-          username: 734886783@qq.com
-          password: 7717vcaml
-          searchPaths: respo
-       #   skip-ssl-validation: true
+       git:
+        uri: https://gitee.com/zhangqiang7717/trend-config
+        searchPaths: respo
+        username: zhangqiang7717
+        password: 7717vcaml
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
-hystrix:
-    command:
-        default:
-            execution:
-                isolation:
-                    thread:
-                        timeout-in-milliseconds: 2000
+

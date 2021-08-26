@@ -14,8 +14,9 @@
     <module>index-data-service</module>
     <module>index-zuul-service</module>
     <module>trend-trading-backtest-service</module>
-      <module>trend-trading-backtest-view</module>
+    <module>trend-trading-backtest-view</module>
     <module>index-config-server</module>
+    <module>index-hystrix-dashboard</module>
   </modules>
   <packaging>pom</packaging>
 

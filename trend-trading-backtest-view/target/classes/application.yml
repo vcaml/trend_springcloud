@@ -1,13 +1,22 @@
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
 spring:
   application:
-    name: trend-trading-backtest-view
+    name:  trend-trading-backtest-view
   thymeleaf:
-    mode: LEGACYHTML5
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
     encoding: UTF-8
     servlet:
-      content-type: text/html
-    cache: false
+     content-type: text/html
+    mode: HTML5
+  zipkin:
+    base-url: http://localhost:9411
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"

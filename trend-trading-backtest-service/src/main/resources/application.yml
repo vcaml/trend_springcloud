@@ -7,6 +7,17 @@ spring:
     name:  trend-trading-backtest-service
 
 feign.hystrix.enabled: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+
 hystrix:
   command:
     default:

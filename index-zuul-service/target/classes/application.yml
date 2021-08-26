@@ -17,13 +17,11 @@ zuul:
       path: /api-view/**
       serviceId: trend-trading-backtest-view
 hystrix:
-    command:
-        default:
-            execution:
-                isolation:
-                    thread:
-                        timeout-in-milliseconds: 6000
-
-
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
 
 
